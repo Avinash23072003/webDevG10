@@ -413,7 +413,7 @@ const HomePage = () => {
                 </Link>
               </li>
               <li>
-                <a href="https://github.com/Rohitsharma97714/Niche-E-commerce-Platform-for-Handmade-Products" target="_blank" rel="noreferrer" className="hover:underline">💻 GitHub Repo</a>
+                <a href="https://github.com/amitrifresh/WebDevIntrnProject-G10" target="_blank" rel="noreferrer"           className="hover:underline">💻 GitHub Repo</a>
               </li>
               <li>
                 <Link to="/terms" className="hover:underline">📄 Terms & Conditions</Link>
@@ -446,7 +446,7 @@ const HomePage = () => {
           {/* Contact & Social */}
           <div>
             <h4 className="text-lg font-semibold mb-2">Contact</h4>
-            <p className="text-sm text-gray-400">📧 Email: rohitkumar.pr45@gmail.com</p>
+            <p className="text-sm text-gray-400">📧 Email: amitrifresh9495@gmail.com</p>
             <p className="text-sm text-gray-400">📍 Location: India</p>
             <div className="flex gap-3 mt-3">
               <a href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">
