@@ -413,7 +413,9 @@ const HomePage = () => {
                 </Link>
               </li>
               <li>
+
                 <a href="https://github.com/amitrifresh/WebDevIntrnProject-G10" target="_blank" rel="noreferrer"           className="hover:underline">💻 GitHub Repo</a>
+               
               </li>
               <li>
                 <Link to="/terms" className="hover:underline">📄 Terms & Conditions</Link>
@@ -446,9 +448,13 @@ const HomePage = () => {
           {/* Contact & Social */}
           <div>
             <h4 className="text-lg font-semibold mb-2">Contact</h4>
+
             <p className="text-sm text-gray-400">📧 Email: amitrifresh9495@gmail.com</p>
+
+            <p className="text-sm text-gray-400">📧 Email: chitareavinash6@gmail.com</p>
+
             <p className="text-sm text-gray-400">📍 Location: India</p>
-            <div className="flex gap-3 mt-3">
+            {/* <div className="flex gap-3 mt-3">
               <a href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">
                 <svg className="w-6 h-6 inline" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5" stroke="currentColor" fill="none"/>
@@ -466,7 +472,7 @@ const HomePage = () => {
                   <path d="M22.46 6c-.77.35-1.6.58-2.47.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 11.1 9.03c0 .34.04.67.1.99A12.13 12.13 0 0 1 3.1 5.1a4.28 4.28 0 0 0 1.32 5.71c-.7-.02-1.36-.21-1.94-.53v.05a4.28 4.28 0 0 0 3.43 4.19c-.33.09-.68.14-1.04.14-.25 0-.5-.02-.74-.07a4.29 4.29 0 0 0 4 2.98A8.6 8.6 0 0 1 2 19.54a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.39-.01-.58A8.72 8.72 0 0 0 24 4.59a8.5 8.5 0 0 1-2.54.7z"/>
                 </svg>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 
