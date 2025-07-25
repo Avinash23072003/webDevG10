@@ -6,6 +6,7 @@ import { FiMenu, FiX, FiHome, FiInfo, FiShoppingCart, FiUser, FiPackage, FiKey, 
 import bannerImg from '../assets/Banner-img.jpg';
 import { useWishlist } from '../context/WishlistContext';
 
+
 const HomePage = () => {
   const [showAll, setShowAll] = useState(false);
   const [products, setProducts] = useState([]);
@@ -141,7 +142,7 @@ const HomePage = () => {
           )}
         </nav>
 
-        {/* Mobile Navigation - Right Half Drawer */}
+        {/* ...........................Mobile Navigation - Right Half Drawer.......................... */}
         <div 
             ref={mobileMenuRef}
             className={`fixed top-0 right-0 h-auto max-h-screen overflow-y-auto w-1/2 max-w-xs  bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${
@@ -150,7 +151,8 @@ const HomePage = () => {
           >
 
           <div className="h-full flex flex-col">
-            {/* Menu Header */}
+            {/* ...................................Menu Header........................................... */}
+
             <div className="p-4 border-b border-gray-200 flex justify-between items-center">
               <span className="font-bold text-orange-600">Menu</span>
               <button 
@@ -161,7 +163,8 @@ const HomePage = () => {
               </button>
             </div>
             
-            {/* Menu Content */}
+            {/* ........................................Menu Content................................................ */}
+
             <div className="flex-1 overflow-y-auto p-4 space-y-2">
               <Link 
                 to="/" 
@@ -192,6 +195,7 @@ const HomePage = () => {
               >
                 <FiShoppingCart className="flex-shrink-0" />
                 <span>Cart</span>
+                
               </Link>
               <Link 
               to="/wishlist" 
@@ -204,7 +208,8 @@ const HomePage = () => {
 
               {user ? (
                 <>
-                  {/* User Section Divider */}
+                  {/* ....................................User Section Divider......................................... */}
+
                   <div className="pt-2 mt-2 border-t border-gray-100">
                     <div className="flex items-center gap-3 p-3 text-gray-500">
                       <FiUser className="flex-shrink-0" />
@@ -267,15 +272,16 @@ const HomePage = () => {
         style={{ backgroundImage: `url(${bannerImg})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-2">Not Just Handmade. Heartmade.</h2>
-          <p className="mb-4 max-w-md">Explore art you can feel — straight from the hands of India's finest creators. 🧵🎨</p>
+          <h2 className="text-2xl md:text-4xl font-bold mb-2">More than Handmade — It's Heartmade</h2>
+          <p className="mb-4 max-w-md">Discover soulful creations crafted by India’s finest artisans — art you can feel, stories you can hold. 🧵🎨</p>
           <button onClick={() => navigate('/cart')} className="bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded text-white">
             Shop Now
           </button>
         </div>
       </div>
 
-      {/* Categories */}
+      {/* .......................................Categories......................................................... */}
+
       <div className="px-4 py-8 flex flex-col items-center">
         <h3 className="text-xl font-semibold mb-4 text-center">🧵 Top Categories</h3>
         <div className="flex flex-wrap gap-3 justify-center">
@@ -291,7 +297,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Filters */}
+    {/* .........................................Filter................................................ */}
+
       <div className="px-4 flex flex-col md:flex-row md:items-center gap-4 mb-6 justify-center items-center">
         <input
           type="text"
@@ -312,7 +319,8 @@ const HomePage = () => {
         </select>
       </div>
 
-      {/* Product Grid */}
+      {/* ........................................Product Grid......................................... */}
+
       <div className="px-4">
         <h3 className="text-xl font-semibold mb-4 text-center">✨ Featured Products</h3>
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -322,7 +330,8 @@ const HomePage = () => {
           key={p._id}
           className="bg-white rounded shadow overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg block"
         >
-          {/* Wishlist Icon */}
+          {/* ....................................Wishlist Icon.............................................. */}
+
           <button
             onClick={(e) => {
               e.preventDefault();
@@ -378,7 +387,8 @@ const HomePage = () => {
         )}
       </div>
 
-      {/* Footer */}
+      {/* .............................................Footer...................................... */}
+
       <footer className="bg-gray-900 text-white py-10 mt-12">
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Us */}
@@ -390,7 +400,8 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* ........................................Quick Links.................................. */}
+
           <div>
             <h4 className="text-lg font-semibold mb-2">Quick Links</h4>
             <ul className="space-y-1 text-sm text-gray-300">
@@ -424,7 +435,8 @@ const HomePage = () => {
             </ul>
           </div>
 
-          {/* Newsletter Signup */}
+          {/* ...................................Newsletter Signup................................... */}
+
           <div>
             <h4 className="text-lg font-semibold mb-2">Newsletter</h4>
             <form className="flex flex-col gap-2">
@@ -443,7 +455,8 @@ const HomePage = () => {
             <p className="text-xs text-gray-400 mt-2">Get updates on new arrivals and offers.</p>
           </div>
 
-          {/* Contact & Social */}
+          {/* ......................................Contact & Social........................................... */}
+
           <div>
             <h4 className="text-lg font-semibold mb-2">Contact</h4>
             <p className="text-sm text-gray-400">📧 Email: amitrifresh9495@gmail.com</p>
@@ -470,7 +483,8 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* Bottom Text */}
+        {/* ...........................................Bottom Text.................................................. */}
+
         <div className="text-center text-gray-500 text-xs mt-6 border-t border-gray-700 pt-4 flex flex-col items-center gap-2">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

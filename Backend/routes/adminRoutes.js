@@ -2,7 +2,8 @@ const express = require('express');
 const User = require('../models/User');
 const router = express.Router();
 
-// Get all unapproved artisans
+// Get all unapproved artisans.................................
+
 router.get('/unapproved-artisans', async (req, res) => {
   try {
     const artisans = await User.find({ role: 'artisan', isApproved: false });
@@ -12,7 +13,8 @@ router.get('/unapproved-artisans', async (req, res) => {
   }
 });
 
-// Approve artisan
+// Approve artisan..........................................
+
 router.patch('/approve-artisan/:id', async (req, res) => {
   try {
     const updated = await User.findByIdAndUpdate(
@@ -26,7 +28,8 @@ router.patch('/approve-artisan/:id', async (req, res) => {
   }
 });
 
-// Reject artisan (optional delete)
+// Reject artisan (optional delete)...................................
+
 router.delete('/reject-artisan/:id', async (req, res) => {
   try {
     await User.findByIdAndDelete(req.params.id);
