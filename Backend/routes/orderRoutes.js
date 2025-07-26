@@ -3,7 +3,8 @@ const router = express.Router();
 const Order = require('../models/Order');
 const Product = require('../models/Product');
 
-// ✅ Create Order
+// ✅ Create Order.................................................
+
 router.post('/', async (req, res) => {
   const { userId, items, total, address, paymentStatus } = req.body;
   console.log('🛒 Order incoming:', { userId, items, total, address, paymentStatus });
@@ -36,7 +37,8 @@ router.post('/', async (req, res) => {
   }
 });
 
-// ✅ Get orders for a specific user
+// ✅ Get orders for a specific user.......................................
+
 router.get('/user/:id', async (req, res) => {
   try {
     const orders = await Order.find({ user: req.params.id }).populate('items.productId');
@@ -48,7 +50,8 @@ router.get('/user/:id', async (req, res) => {
 });
 
 // ✅ Cancel order (if still pending)
-// ✅ Cancel order (if not already cancelled or delivered)
+// ✅ Cancel order (if not already cancelled or delivered).........................
+
 router.put('/:id/cancel', async (req, res) => {
   try {
     const order = await Order.findById(req.params.id);
@@ -69,7 +72,8 @@ router.put('/:id/cancel', async (req, res) => {
 });
 
 
-// ✅ Get orders for a specific artisan
+// ✅ Get orders for a specific artisan..................................
+
 router.get('/artisan/:artisanId', async (req, res) => {
   try {
     const orders = await Order.find({ 'items.artisan': req.params.artisanId })
@@ -82,7 +86,8 @@ router.get('/artisan/:artisanId', async (req, res) => {
   }
 });
 
-// ✅ Update order status (artisan action)
+// ✅ Update order status (artisan action)..............................
+
 router.put('/:orderId/status', async (req, res) => {
   try {
     const { status } = req.body;

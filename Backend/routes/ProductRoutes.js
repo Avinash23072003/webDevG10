@@ -4,7 +4,7 @@ const Product = require('../models/Product');
 const User = require('../models/User');
 const { protect } = require('../middleware/auth'); // For authenticated routes
 
-// ✅ Create a new product (only if artisan is approved)
+// ✅ Create a new product (only if artisan is approved)...............
 router.post('/', async (req, res) => {
   const { title, description, price, image, category, artisanId } = req.body;
 
@@ -26,7 +26,8 @@ router.post('/', async (req, res) => {
 });
 
 
-// ✅ Get all approved products
+// ✅ Get all approved products.......................
+
 router.get('/', async (req, res) => {
   try {
     const products = await Product.find({ isApproved: true });
@@ -36,7 +37,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-// ✅ Get products by artisan ID
+
+// ✅ Get products by artisan ID......................
+
 router.get('/artisan/:artisanId', async (req, res) => {
   try {
     const products = await Product.find({ artisanId: req.params.artisanId });
@@ -46,7 +49,8 @@ router.get('/artisan/:artisanId', async (req, res) => {
   }
 });
 
-// ✅ Get unapproved products (admin use)
+// ✅ Get unapproved products (admin use)................
+
 router.get('/unapproved', async (req, res) => {
   try {
     const products = await Product.find({ isApproved: false }).populate('artisanId', 'name email');
@@ -56,7 +60,8 @@ router.get('/unapproved', async (req, res) => {
   }
 });
 
-// ✅ Approve or reject a product (admin use)
+// ✅ Approve or reject a product (admin use).................
+
 router.patch('/approve/:id', async (req, res) => {
   const { isApproved } = req.body;
 
@@ -72,7 +77,8 @@ router.patch('/approve/:id', async (req, res) => {
   }
 });
 
-// ✅ Update product
+// ✅ Update product...........................
+
 router.put('/:id', async (req, res) => {
   try {
     const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -82,7 +88,8 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// ✅ Delete product
+// ✅ Delete product..............................
+
 router.delete('/:id', async (req, res) => {
   try {
     await Product.findByIdAndDelete(req.params.id);
